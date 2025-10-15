@@ -14,8 +14,8 @@
 
     <!-- AI orb gradient -->
     <radialGradient id="aiGrad" cx="50%" cy="40%" r="50%">
-      <stop offset="0" stop-color="#7c5cff" stop-opacity="1" />
-      <stop offset="1" stop-color="#2db7ff" stop-opacity="0.95" />
+      <stop offset="0" stop-color="#3056d3" stop-opacity="1" />
+      <stop offset="1" stop-color="#179bee" stop-opacity="0.95" />
     </radialGradient>
 
     <!-- glow for AI orb -->
@@ -76,9 +76,9 @@
         <rect x="12" y="8" width="236" height="104" rx="6" fill="url(#gloss)" opacity="0.06" />
         <g transform="translate(12,12)" fill="#ffffff" opacity="0.95">
           <rect width="48" height="32" rx="6" fill="#3056d3" />
-          <rect x="64" width="48" height="32" rx="6" fill="#17c" />
-          <rect x="128" width="48" height="32" rx="6" fill="#13c296" />
-          <rect x="192" width="48" height="32" rx="6" fill="#ffb020" />
+          <rect x="64" width="48" height="32" rx="6" fill="#3056d3" />
+          <rect x="128" width="48" height="32" rx="6" fill="#3056d3" />
+          <rect x="192" width="48" height="32" rx="6" fill="#9aa4d8" />
 
           <rect y="44" width="48" height="32" rx="6" fill="#6b7280" opacity="0.32" />
           <rect x="64" y="44" width="48" height="32" rx="6" fill="#6b7280" opacity="0.24" />
@@ -103,12 +103,12 @@
       </g>
       <!-- app thumbnails -->
       <g transform="translate(28,36)" fill="#ffffff" opacity="0.95">
-        <rect width="28" height="20" rx="5" fill="#3056d3" />
-        <rect x="36" width="28" height="20" rx="5" fill="#17c" />
-        <rect x="72" width="28" height="20" rx="5" fill="#13c296" />
-        <rect x="0" y="30" width="28" height="20" rx="5" fill="#ffb020" />
-        <rect x="36" y="30" width="28" height="20" rx="5" fill="#9aa4d8" opacity="0.9" />
-        <rect x="72" y="30" width="28" height="20" rx="5" fill="#9aa4d8" opacity="0.6" />
+          <rect width="28" height="20" rx="5" fill="#3056d3" />
+          <rect x="36" width="28" height="20" rx="5" fill="#3056d3" />
+          <rect x="72" width="28" height="20" rx="5" fill="#3056d3" />
+          <rect x="0" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
+          <rect x="36" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
+          <rect x="72" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
       </g>
     </g>
   </g>
@@ -127,14 +127,14 @@
       <!-- small app icons -->
       <g transform="translate(28,44)" fill="#ffffff" opacity="0.95">
         <rect width="18" height="18" rx="4" fill="#3056d3" />
-        <rect x="24" width="18" height="18" rx="4" fill="#17c" />
-        <rect x="48" width="18" height="18" rx="4" fill="#13c296" />
-        <rect x="72" width="18" height="18" rx="4" fill="#ffb020" />
+        <rect x="24" width="18" height="18" rx="4" fill="#3056d3" />
+        <rect x="48" width="18" height="18" rx="4" fill="#3056d3" />
+        <rect x="72" width="18" height="18" rx="4" fill="#3056d3" />
 
-        <rect y="28" width="18" height="18" rx="4" fill="#9aa4d8" opacity="0.9" />
-        <rect x="24" y="28" width="18" height="18" rx="4" fill="#9aa4d8" opacity="0.6" />
-        <rect x="48" y="28" width="18" height="18" rx="4" fill="#9aa4d8" opacity="0.45" />
-        <rect x="72" y="28" width="18" height="18" rx="4" fill="#9aa4d8" opacity="0.3" />
+        <rect y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
+        <rect x="24" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
+        <rect x="48" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
+        <rect x="72" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
 
         <!-- content lines -->
         <rect x="0" y="64" width="76" height="6" rx="3" fill="#ffffff" opacity="0.12" />
@@ -143,41 +143,89 @@
     </g>
   </g>
 
-  <!-- Peripherals: keyboard + mouse -->
-  <g transform="translate(160,210)">
-    <!-- keyboard shadow -->
-    <ellipse cx="140" cy="20" rx="140" ry="10" fill="#000" opacity="0.06" filter="url(#soft)" />
+  <!-- Peripherals: keyboard + mouse (realistic, larger) -->
+  <g transform="translate(120,210)">
+    <!-- large softened shadow under keyboard+mouse -->
+    <ellipse cx="180" cy="48" rx="200" ry="22" fill="#000" opacity="0.08" filter="url(#soft)" />
 
-    <!-- keyboard body -->
-    <rect x="0" y="0" width="280" height="44" rx="8" fill="#ffffff" opacity="0.96" stroke="#eef2ff" />
-    <g transform="translate(10,8)" fill="#9aa4d8" opacity="0.95">
-      <!-- row 1 keys -->
-      <rect width="20" height="12" rx="2" />
-      <rect x="24" width="20" height="12" rx="2" />
-      <rect x="48" width="20" height="12" rx="2" />
-      <rect x="72" width="20" height="12" rx="2" />
-      <rect x="96" width="20" height="12" rx="2" />
-      <rect x="120" width="20" height="12" rx="2" />
-      <rect x="144" width="20" height="12" rx="2" />
-      <rect x="168" width="20" height="12" rx="2" />
-      <rect x="192" width="20" height="12" rx="2" />
-      <rect x="216" width="44" height="12" rx="2" />
+    <!-- Keyboard -->
+    <g>
+      <!-- keyboard base -->
+      <rect x="0" y="0" width="360" height="64" rx="10" fill="#f8fbff" stroke="#e6eefc" stroke-width="1"/>
+      <!-- small top bevel for subtle depth -->
+      <rect x="0" y="0" width="360" height="8" rx="10" fill="#eef4ff" opacity="0.6"/>
 
-      <!-- row 2 keys -->
-      <rect y="16" width="28" height="12" rx="2" />
-      <rect x="32" y="16" width="28" height="12" rx="2" />
-      <rect x="64" y="16" width="28" height="12" rx="2" />
-      <rect x="96" y="16" width="28" height="12" rx="2" />
-      <rect x="128" y="16" width="28" height="12" rx="2" />
-      <rect x="160" y="16" width="28" height="12" rx="2" />
-      <rect x="192" y="16" width="28" height="12" rx="2" />
-      <rect x="224" y="16" width="56" height="12" rx="2" />
+      <!-- keys: 3 rows + spacebar -->
+      <g transform="translate(14,14)">
+        <!-- row 1 -->
+        <g fill="#eaf2ff">
+          <rect width="28" height="14" rx="3" />
+          <rect x="36" width="28" height="14" rx="3" />
+          <rect x="72" width="28" height="14" rx="3" />
+          <rect x="108" width="28" height="14" rx="3" />
+          <rect x="144" width="28" height="14" rx="3" />
+          <rect x="180" width="28" height="14" rx="3" />
+          <rect x="216" width="28" height="14" rx="3" />
+          <rect x="252" width="28" height="14" rx="3" />
+          <rect x="288" width="28" height="14" rx="3" />
+        </g>
+
+        <!-- row 2 -->
+        <g transform="translate(0,18)" fill="#eaf2ff">
+          <rect width="34" height="14" rx="3" />
+          <rect x="40" width="34" height="14" rx="3" />
+          <rect x="84" width="34" height="14" rx="3" />
+          <rect x="128" width="34" height="14" rx="3" />
+          <rect x="172" width="34" height="14" rx="3" />
+          <rect x="216" width="34" height="14" rx="3" />
+          <rect x="260" width="34" height="14" rx="3" />
+        </g>
+
+        <!-- spacebar row -->
+        <g transform="translate(0,36)">
+          <rect x="0" y="0" width="56" height="12" rx="3" fill="#eaf2ff" />
+          <rect x="64" y="0" width="232" height="12" rx="3" fill="#eaf2ff" />
+          <rect x="304" y="0" width="40" height="12" rx="3" fill="#eaf2ff" />
+        </g>
+
+        <!-- key legends (subtle) -->
+        <g transform="translate(3,3)" fill="#9aa4d8" font-family="sans-serif" font-size="7" opacity="0.9">
+          <text x="4" y="9">Q</text>
+          <text x="40" y="9">W</text>
+          <text x="76" y="9">E</text>
+          <text x="112" y="9">R</text>
+          <text x="148" y="9">T</text>
+          <text x="184" y="9">Y</text>
+          <text x="220" y="9">U</text>
+          <text x="256" y="9">I</text>
+          <text x="292" y="9">O</text>
+
+          <text x="6" y="27">A</text>
+          <text x="42" y="27">S</text>
+          <text x="86" y="27">D</text>
+          <text x="130" y="27">F</text>
+          <text x="174" y="27">G</text>
+          <text x="218" y="27">H</text>
+          <text x="262" y="27">J</text>
+
+          <text x="18" y="45">␣</text>
+        </g>
+      </g>
     </g>
 
-    <!-- mouse to the right of keyboard -->
-    <g transform="translate(292,6)">
-      <ellipse cx="24" cy="18" rx="28" ry="18" fill="#ffffff" stroke="#eef2ff" />
-      <rect x="22" y="6" width="4" height="24" rx="2" fill="#e6eaf8" />
+    <!-- Mouse (to right of keyboard) -->
+    <g transform="translate(392,10)">
+      <!-- mouse shadow -->
+      <ellipse cx="48" cy="46" rx="44" ry="10" fill="#000" opacity="0.08" filter="url(#soft)" />
+
+      <!-- mouse body -->
+      <rect x="0" y="0" width="96" height="56" rx="28" fill="#ffffff" stroke="#e6eefc" stroke-width="1"/>
+      <!-- left/right button separation -->
+      <path d="M48 6 v20" stroke="#e6eef8" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+      <!-- scroll wheel -->
+      <rect x="44" y="28" width="8" height="6" rx="3" fill="#e6eef8" />
+      <!-- subtle underside shadow to give curvature -->
+      <ellipse cx="48" cy="44" rx="30" ry="6" fill="#000" opacity="0.04" />
     </g>
   </g>
 
@@ -185,7 +233,7 @@
   <g transform="translate(560,18)">
     <!-- glow -->
     <circle cx="0" cy="0" r="28" fill="url(#aiGrad)" filter="url(#glow)" opacity="0.95" />
-    <circle cx="0" cy="0" r="20" fill="url(#aiGrad)" stroke="#ffffff" stroke-opacity="0.16" />
+    <circle cx="0" cy="0" r="20" fill="url(#aiGrad)" stroke="#ffffff" stroke-opacity="0.12" />
     <text x="0" y="4" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#ffffff">AI</text>
   </g>
 
