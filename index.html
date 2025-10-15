@@ -5,25 +5,26 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wisent Code</title>
+  <title>Wisent Code — Mobile Applications Development & Security</title>
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Wisent Code">
-  <meta name="description" content="">
+  <meta name="title" content="Wisent Code — Mobile Applications Development & Security">
+  <meta name="description" content="Wisent Code builds secure, high-quality mobile applications and provides app security consulting for enterprises. Contact us for development and security services.">
+  <link rel="canonical" href="https://wisentcode.com/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://uideck.com/play/">
-  <meta property="og:title" content="Play - Free Open Source HTML Bootstrap Template by UIdeck">
-  <meta property="og:description" content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team">
-  <meta property="og:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+  <meta property="og:url" content="https://wisentcode.com/">
+  <meta property="og:title" content="Wisent Code — Mobile Applications Development & Security">
+  <meta property="og:description" content="Wisent Code builds secure, high-quality mobile applications and provides app security consulting for enterprises.">
+  <meta property="og:image" content="https://wisentcode.com/assets/images/hero/hero-image.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://uideck.com/play/">
-  <meta property="twitter:title" content="Play - Free Open Source HTML Bootstrap Template by UIdeck">
-  <meta property="twitter:description" content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team">
-  <meta property="twitter:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+  <meta property="twitter:url" content="https://wisentcode.com/">
+  <meta property="twitter:title" content="Wisent Code — Mobile Applications Development & Security">
+  <meta property="twitter:description" content="Wisent Code builds secure, high-quality mobile applications and provides app security consulting for enterprises.">
+  <meta property="twitter:image" content="https://wisentcode.com/assets/images/hero/hero-image.svg">
 
   <!--====== Favicon Icon ======-->
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
@@ -110,7 +111,7 @@
             <img src="assets/images/hero/brand.svg" alt="brand" />
           </div>
           <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-            <img src="assets/images/hero/hero-image.svg" alt="hero-image" />
+            <img src="assets/images/hero/hero-image.svg" alt="hero-image" loading="lazy" />
             <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" />
             <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" />
           </div>
@@ -413,7 +414,7 @@
             </div>
             <div class="ud-testimonial-info">
               <div class="ud-testimonial-image">
-                <img src="assets/images/testimonials/author-01.png" alt="author" />
+                <img src="assets/images/testimonials/author-01.png" alt="author" loading="lazy" />
               </div>
               <div class="ud-testimonial-meta">
                 <h4>Sabo Masties</h4>
@@ -439,7 +440,7 @@
             </div>
             <div class="ud-testimonial-info">
               <div class="ud-testimonial-image">
-                <img src="assets/images/testimonials/author-02.png" alt="author" />
+                <img src="assets/images/testimonials/author-02.png" alt="author" loading="lazy" />
               </div>
               <div class="ud-testimonial-meta">
                 <h4>Margin Gesmu</h4>
@@ -465,7 +466,7 @@
             </div>
             <div class="ud-testimonial-info">
               <div class="ud-testimonial-image">
-                <img src="assets/images/testimonials/author-03.png" alt="author" />
+                <img src="assets/images/testimonials/author-03.png" alt="author" loading="lazy" />
               </div>
               <div class="ud-testimonial-meta">
                 <h4>William Smith</h4>
@@ -688,8 +689,8 @@
                 </div>
                 <div class="ud-info-meta">
                   <h5>How Can We Help?</h5>
-                  <p>info@yourdomain.com</p>
-                  <p>contact@yourdomain.com</p>
+                  <p>office@wisentcode.com</p>
+                  <p>contact@wisentcode.com</p>
                 </div>
               </div>
             </div>
@@ -698,22 +699,22 @@
         <div class="col-xl-4 col-lg-5">
           <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
             <h3 class="ud-contact-form-title">Send us a Message</h3>
-            <form class="ud-contact-form">
+            <form class="ud-contact-form" method="post" action="/contact">
               <div class="ud-form-group">
                 <label for="fullName">Full Name*</label>
-                <input type="text" name="fullName" placeholder="Adam Gelius" />
+                <input id="fullName" type="text" name="fullName" placeholder="Adam Gelius" required />
               </div>
               <div class="ud-form-group">
                 <label for="email">Email*</label>
-                <input type="email" name="email" placeholder="example@yourmail.com" />
+                <input id="email" type="email" name="email" placeholder="example@yourmail.com" required />
               </div>
               <div class="ud-form-group">
                 <label for="phone">Phone*</label>
-                <input type="text" name="phone" placeholder="+885 1254 5211 552" />
+                <input id="phone" type="text" name="phone" placeholder="+885 1254 5211 552" />
               </div>
               <div class="ud-form-group">
                 <label for="message">Message*</label>
-                <textarea name="message" rows="1" placeholder="type your message here"></textarea>
+                <textarea id="message" name="message" rows="3" placeholder="type your message here" required></textarea>
               </div>
               <div class="ud-form-group mb-0">
                 <button type="submit" class="ud-main-btn">
@@ -819,17 +820,17 @@
               <h5 class="ud-widget-title">Our Products</h5>
               <ul class="ud-widget-links">
                 <li>
-                  <a href="https://lineicons.com/" rel="nofollow noopner" target="_blank">Lineicons
+                  <a href="https://lineicons.com/" rel="nofollow noopener noreferrer" target="_blank">Lineicons
                   </a>
                 </li>
                 <li>
-                  <a href="https://ecommercehtml.com/" rel="nofollow noopner" target="_blank">Ecommerce HTML</a>
+                  <a href="https://ecommercehtml.com/" rel="nofollow noopener noreferrer" target="_blank">Ecommerce HTML</a>
                 </li>
                 <li>
-                  <a href="https://ayroui.com/" rel="nofollow noopner" target="_blank">Ayro UI</a>
+                  <a href="https://ayroui.com/" rel="nofollow noopener noreferrer" target="_blank">Ayro UI</a>
                 </li>
                 <li>
-                  <a href="https://graygrids.com/" rel="nofollow noopner" target="_blank">Plain Admin</a>
+                  <a href="https://graygrids.com/" rel="nofollow noopener noreferrer" target="_blank">Plain Admin</a>
                 </li>
               </ul>
             </div>
@@ -839,33 +840,33 @@
               <h5 class="ud-widget-title">Partners</h5>
               <ul class="ud-widget-brands">
                 <li>
-                  <a href="https://ayroui.com/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/ayroui.svg" alt="ayroui" />
+                  <a href="https://ayroui.com/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/ayroui.svg" alt="ayroui" loading="lazy" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://ecommercehtml.com/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/ecommerce-html.svg" alt="ecommerce-html" />
+                  <a href="https://ecommercehtml.com/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/ecommerce-html.svg" alt="ecommerce-html" loading="lazy" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://graygrids.com/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/graygrids.svg" alt="graygrids" />
+                  <a href="https://graygrids.com/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/graygrids.svg" alt="graygrids" loading="lazy" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://lineicons.com/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/lineicons.svg" alt="lineicons" />
+                  <a href="https://lineicons.com/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/lineicons.svg" alt="lineicons" loading="lazy" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://uideck.com/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/uideck.svg" alt="uideck" />
+                  <a href="https://uideck.com/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/uideck.svg" alt="uideck" loading="lazy" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://tailwindtemplates.co/" rel="nofollow noopner" target="_blank">
-                    <img src="assets/images/footer/brands/tailwindtemplates.svg" alt="tailwindtemplates" />
+                  <a href="https://tailwindtemplates.co/" rel="nofollow noopener noreferrer" target="_blank">
+                    <img src="assets/images/footer/brands/tailwindtemplates.svg" alt="tailwindtemplates" loading="lazy" />
                   </a>
                 </li>
               </ul>
@@ -912,49 +913,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    // ==== for menu scroll
-    const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
-    pageLink.forEach((elem) => {
-      elem.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(elem.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-          offsetTop: 1 - 60,
-        });
-      });
-    });
-
-    // section menu active
-    function onScroll(event) {
-      const sections = document.querySelectorAll(".ud-menu-scroll");
-      const scrollPos =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
-
-      for (let i = 0; i < sections.length; i++) {
-        const currLink = sections[i];
-        const val = currLink.getAttribute("href");
-        const refElement = document.querySelector(val);
-        const scrollTopMinus = scrollPos + 73;
-        if (
-          refElement.offsetTop <= scrollTopMinus &&
-          refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-        ) {
-          document
-            .querySelector(".ud-menu-scroll")
-            .classList.remove("active");
-          currLink.classList.add("active");
-        } else {
-          currLink.classList.remove("active");
-        }
-      }
-    }
-
-    window.document.addEventListener("scroll", onScroll);
-  </script>
 </body>
 
 </html>

@@ -36,16 +36,60 @@
   let navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
 
-  document.querySelectorAll(".ud-menu-scroll").forEach((e) =>
-    e.addEventListener("click", () => {
+  document.querySelectorAll(".ud-menu-scroll").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const header = document.querySelector('.ud-header');
+        const headerOffset = header ? header.offsetHeight : 70;
+        const target = document.querySelector(href);
+        if (target) {
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = targetPosition - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          try { history.replaceState(null, '', href); } catch (err) { /* ignore */ }
+        }
+      }
+
       navbarToggler.classList.remove("active");
       navbarCollapse.classList.remove("show");
-    })
-  );
+    });
+  });
   navbarToggler.addEventListener("click", function () {
     navbarToggler.classList.toggle("active");
     navbarCollapse.classList.toggle("show");
   });
+
+  // section menu active
+  const menuLinks = Array.from(document.querySelectorAll('.ud-menu-scroll'));
+  function onScroll() {
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    let activeSet = false;
+    menuLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      const ref = document.querySelector(href);
+      if (!ref) return;
+      const header = document.querySelector('.ud-header');
+      const headerOffset = header ? header.offsetHeight : 70;
+      const top = ref.offsetTop - headerOffset - 5;
+      const bottom = top + ref.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
+        link.classList.add('active');
+        activeSet = true;
+      } else {
+        link.classList.remove('active');
+      }
+    });
+    if (!activeSet) {
+      menuLinks.forEach((l) => l.classList.remove('active'));
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  // initialize
+  onScroll();
 
   // ===== submenu
   const submenuButton = document.querySelectorAll(".nav-item-has-children");
