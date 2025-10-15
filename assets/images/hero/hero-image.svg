@@ -108,13 +108,13 @@
         <rect x="28" y="32" width="80" height="136" rx="6" fill="url(#gloss)" opacity="0.06" />
       </g>
       <!-- app thumbnails -->
-      <g transform="translate(28,36)" fill="#ffffff" opacity="0.95">
-          <rect width="28" height="20" rx="5" fill="#3056d3" />
-          <rect x="36" width="28" height="20" rx="5" fill="#3056d3" />
-          <rect x="72" width="28" height="20" rx="5" fill="#3056d3" />
-          <rect x="0" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
-          <rect x="36" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
-          <rect x="72" y="30" width="28" height="20" rx="5" fill="#9aa4d8" />
+      <g transform="translate(32,40)" fill="#ffffff" opacity="0.95">
+          <rect width="18" height="12" rx="4" fill="#3056d3" />
+          <rect x="24" width="18" height="12" rx="4" fill="#3056d3" />
+          <rect x="48" width="18" height="12" rx="4" fill="#3056d3" />
+          <rect x="0" y="24" width="18" height="12" rx="4" fill="#9aa4d8" />
+          <rect x="24" y="24" width="18" height="12" rx="4" fill="#9aa4d8" />
+          <rect x="48" y="24" width="18" height="12" rx="4" fill="#9aa4d8" />
       </g>
     </g>
   </g>
@@ -131,20 +131,20 @@
       </g>
 
       <!-- small app icons -->
-      <g transform="translate(28,44)" fill="#ffffff" opacity="0.95">
-        <rect width="18" height="18" rx="4" fill="#3056d3" />
-        <rect x="24" width="18" height="18" rx="4" fill="#3056d3" />
-        <rect x="48" width="18" height="18" rx="4" fill="#3056d3" />
-        <rect x="72" width="18" height="18" rx="4" fill="#3056d3" />
+      <g transform="translate(24,44)" fill="#ffffff" opacity="0.95">
+        <rect width="14" height="14" rx="3" fill="#3056d3" />
+        <rect x="18" width="14" height="14" rx="3" fill="#3056d3" />
+        <rect x="36" width="14" height="14" rx="3" fill="#3056d3" />
+        <rect x="54" width="14" height="14" rx="3" fill="#3056d3" />
 
-        <rect y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
-        <rect x="24" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
-        <rect x="48" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
-        <rect x="72" y="28" width="18" height="18" rx="4" fill="#9aa4d8" />
+        <rect y="22" width="14" height="14" rx="3" fill="#9aa4d8" />
+        <rect x="18" y="22" width="14" height="14" rx="3" fill="#9aa4d8" />
+        <rect x="36" y="22" width="14" height="14" rx="3" fill="#9aa4d8" />
+        <rect x="54" y="22" width="14" height="14" rx="3" fill="#9aa4d8" />
 
         <!-- content lines -->
-        <rect x="0" y="64" width="76" height="6" rx="3" fill="#ffffff" opacity="0.12" />
-        <rect x="0" y="76" width="52" height="6" rx="3" fill="#ffffff" opacity="0.08" />
+        <rect x="0" y="44" width="56" height="4" rx="2" fill="#ffffff" opacity="0.12" />
+        <rect x="0" y="52" width="40" height="4" rx="2" fill="#ffffff" opacity="0.08" />
       </g>
     </g>
   </g>
