@@ -612,6 +612,29 @@ p {
   margin-bottom: 40px;
 }
 
+.ud-hero-brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ud-hero-brands .brand-icon {
+  transition: opacity .25s ease, transform .15s ease, filter .25s ease;
+  opacity: 0.6;
+  width: 40px;
+  height: 40px;
+  filter: grayscale(1);
+}
+
+.ud-hero-brands .brand-icon:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  filter: none;
+}
+
 .ud-hero-brands-wrapper img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -621,6 +644,13 @@ p {
 
 .ud-hero-brands-wrapper img:hover {
   opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .ud-hero-brands .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .ud-hero-image {
