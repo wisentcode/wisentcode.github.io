@@ -7,8 +7,8 @@
 
     <!-- gentle background gradient -->
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fbfdff" stop-opacity="1" />
-      <stop offset="1" stop-color="#f1f7ff" stop-opacity="1" />
+      <stop offset="0" stop-color="#0b1220" stop-opacity="1" />
+      <stop offset="1" stop-color="#0f2540" stop-opacity="1" />
     </linearGradient>
 
     <!-- gloss gradient for screens -->
@@ -108,7 +108,7 @@
         <rect x="28" y="32" width="80" height="136" rx="6" fill="url(#gloss)" opacity="0.06" />
       </g>
       <!-- app thumbnails -->
-      <g transform="translate(0,36)" fill="#ffffff" opacity="0.95">
+      <g transform="translate(28,36)" fill="#ffffff" opacity="0.95">
           <rect width="28" height="20" rx="5" fill="#3056d3" />
           <rect x="36" width="28" height="20" rx="5" fill="#3056d3" />
           <rect x="72" width="28" height="20" rx="5" fill="#3056d3" />
@@ -131,7 +131,7 @@
       </g>
 
       <!-- small app icons -->
-      <g transform="translate(0,44)" fill="#ffffff" opacity="0.95">
+      <g transform="translate(28,44)" fill="#ffffff" opacity="0.95">
         <rect width="18" height="18" rx="4" fill="#3056d3" />
         <rect x="24" width="18" height="18" rx="4" fill="#3056d3" />
         <rect x="48" width="18" height="18" rx="4" fill="#3056d3" />
@@ -157,14 +157,14 @@
     <!-- Keyboard -->
     <g>
       <!-- keyboard base -->
-      <rect x="0" y="0" width="360" height="64" rx="10" fill="#f3f7ff" stroke="#e6eefc" stroke-width="1"/>
+      <rect x="0" y="0" width="360" height="64" rx="10" fill="#d1d5db" stroke="#bfc6cf" stroke-width="1"/>
       <!-- small top bevel for subtle depth -->
-      <rect x="0" y="0" width="360" height="8" rx="10" fill="#e6eefc" opacity="0.9"/>
+      <rect x="0" y="0" width="360" height="8" rx="10" fill="#c3c7ce" opacity="0.95"/>
 
       <!-- keys: 3 rows + spacebar -->
       <g transform="translate(14,14)">
         <!-- row 1 -->
-        <g fill="#ffffff">
+        <g fill="#e0e2e5">
           <rect width="28" height="14" rx="3" />
           <rect x="36" width="28" height="14" rx="3" />
           <rect x="72" width="28" height="14" rx="3" />
@@ -177,7 +177,7 @@
         </g>
 
         <!-- row 2 -->
-        <g transform="translate(0,18)" fill="#ffffff">
+        <g transform="translate(0,18)" fill="#e0e2e5">
           <rect width="34" height="14" rx="3" />
           <rect x="40" width="34" height="14" rx="3" />
           <rect x="84" width="34" height="14" rx="3" />
@@ -222,16 +222,16 @@
     <!-- Mouse (to right of keyboard) -->
     <g transform="translate(392,10)">
       <!-- mouse shadow -->
-      <ellipse cx="48" cy="46" rx="44" ry="10" fill="#000" opacity="0.12" filter="url(#soft)" />
+      <ellipse cx="48" cy="46" rx="44" ry="10" fill="#000" opacity="0.16" filter="url(#soft)" />
 
-      <!-- mouse body (lighter) -->
-      <rect x="0" y="0" width="96" height="56" rx="28" fill="#f8fbff" stroke="#e6eefc" stroke-width="1"/>
+      <!-- mouse body (gray) -->
+      <rect x="0" y="0" width="96" height="56" rx="28" fill="#c7c9cc" stroke="#aeb3b9" stroke-width="1"/>
       <!-- left/right button separation -->
-      <path d="M48 6 v20" stroke="#e6eef8" stroke-width="2" stroke-linecap="round" opacity="0.95" />
+      <path d="M48 6 v20" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round" opacity="0.95" />
       <!-- scroll wheel -->
-      <rect x="44" y="28" width="8" height="6" rx="3" fill="#3056d3" />
+      <rect x="44" y="28" width="8" height="6" rx="3" fill="#8f94a0" />
       <!-- subtle underside shadow to give curvature -->
-      <ellipse cx="48" cy="44" rx="30" ry="6" fill="#000" opacity="0.08" />
+      <ellipse cx="48" cy="44" rx="30" ry="6" fill="#000" opacity="0.12" />
     </g>
   </g>
 
