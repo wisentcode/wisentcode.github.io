@@ -31,16 +31,16 @@
       <feBlend in="SourceGraphic" in2="g" mode="screen" />
     </filter>
 
-    <!-- soft ambient shadow used for blurred ellipses -->
+    <!-- soft ambient shadow used for blurred ellipses (stronger) -->
     <filter id="soft" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b"/>
-      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="26" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.26 0"/>
       <feBlend in="SourceGraphic" in2="b" mode="normal"/>
     </filter>
 
-    <!-- device drop shadow (crisper) retained for outlines -->
+    <!-- device drop shadow (crisper) retained for outlines (stronger) -->
     <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0b1b3a" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0b1b3a" flood-opacity="0.18"/>
     </filter>
 
     <!-- subtle inner shadow for screens -->
@@ -108,7 +108,7 @@
         <rect x="28" y="32" width="80" height="136" rx="6" fill="url(#gloss)" opacity="0.06" />
       </g>
       <!-- app thumbnails -->
-      <g transform="translate(8,36)" fill="#ffffff" opacity="0.95">
+      <g transform="translate(0,36)" fill="#ffffff" opacity="0.95">
           <rect width="28" height="20" rx="5" fill="#3056d3" />
           <rect x="36" width="28" height="20" rx="5" fill="#3056d3" />
           <rect x="72" width="28" height="20" rx="5" fill="#3056d3" />
@@ -131,7 +131,7 @@
       </g>
 
       <!-- small app icons -->
-      <g transform="translate(8,44)" fill="#ffffff" opacity="0.95">
+      <g transform="translate(0,44)" fill="#ffffff" opacity="0.95">
         <rect width="18" height="18" rx="4" fill="#3056d3" />
         <rect x="24" width="18" height="18" rx="4" fill="#3056d3" />
         <rect x="48" width="18" height="18" rx="4" fill="#3056d3" />
@@ -152,19 +152,19 @@
   <!-- Peripherals: keyboard + mouse (realistic, larger) -->
   <g transform="translate(120,210)">
     <!-- large softened shadow under keyboard+mouse -->
-    <ellipse cx="180" cy="48" rx="200" ry="22" fill="#000" opacity="0.08" filter="url(#soft)" />
+      <ellipse cx="180" cy="48" rx="200" ry="22" fill="#000" opacity="0.14" filter="url(#soft)" />
 
     <!-- Keyboard -->
     <g>
       <!-- keyboard base -->
-      <rect x="0" y="0" width="360" height="64" rx="10" fill="#111827" stroke="#0b1220" stroke-width="1"/>
+      <rect x="0" y="0" width="360" height="64" rx="10" fill="#f3f7ff" stroke="#e6eefc" stroke-width="1"/>
       <!-- small top bevel for subtle depth -->
-      <rect x="0" y="0" width="360" height="8" rx="10" fill="#0b1220" opacity="0.6"/>
+      <rect x="0" y="0" width="360" height="8" rx="10" fill="#e6eefc" opacity="0.9"/>
 
       <!-- keys: 3 rows + spacebar -->
       <g transform="translate(14,14)">
         <!-- row 1 -->
-        <g fill="#cbd5ff">
+        <g fill="#ffffff">
           <rect width="28" height="14" rx="3" />
           <rect x="36" width="28" height="14" rx="3" />
           <rect x="72" width="28" height="14" rx="3" />
@@ -177,7 +177,7 @@
         </g>
 
         <!-- row 2 -->
-        <g transform="translate(0,18)" fill="#cbd5ff">
+        <g transform="translate(0,18)" fill="#ffffff">
           <rect width="34" height="14" rx="3" />
           <rect x="40" width="34" height="14" rx="3" />
           <rect x="84" width="34" height="14" rx="3" />
@@ -189,9 +189,9 @@
 
         <!-- spacebar row -->
         <g transform="translate(0,36)">
-          <rect x="0" y="0" width="56" height="12" rx="3" fill="#cbd5ff" />
-          <rect x="64" y="0" width="232" height="12" rx="3" fill="#cbd5ff" />
-          <rect x="304" y="0" width="40" height="12" rx="3" fill="#cbd5ff" />
+          <rect x="0" y="0" width="56" height="12" rx="3" fill="#ffffff" stroke="#e6eefc" stroke-width="0.8" />
+          <rect x="64" y="0" width="232" height="12" rx="3" fill="#ffffff" stroke="#e6eefc" stroke-width="0.8" />
+          <rect x="304" y="0" width="40" height="12" rx="3" fill="#ffffff" stroke="#e6eefc" stroke-width="0.8" />
         </g>
 
         <!-- key legends (subtle) -->
@@ -222,16 +222,16 @@
     <!-- Mouse (to right of keyboard) -->
     <g transform="translate(392,10)">
       <!-- mouse shadow -->
-      <ellipse cx="48" cy="46" rx="44" ry="10" fill="#000" opacity="0.08" filter="url(#soft)" />
+      <ellipse cx="48" cy="46" rx="44" ry="10" fill="#000" opacity="0.12" filter="url(#soft)" />
 
-      <!-- mouse body (dark) -->
-      <rect x="0" y="0" width="96" height="56" rx="28" fill="#0b1220" stroke="#111827" stroke-width="1"/>
+      <!-- mouse body (lighter) -->
+      <rect x="0" y="0" width="96" height="56" rx="28" fill="#f8fbff" stroke="#e6eefc" stroke-width="1"/>
       <!-- left/right button separation -->
-      <path d="M48 6 v20" stroke="#2b3446" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+      <path d="M48 6 v20" stroke="#e6eef8" stroke-width="2" stroke-linecap="round" opacity="0.95" />
       <!-- scroll wheel -->
       <rect x="44" y="28" width="8" height="6" rx="3" fill="#3056d3" />
       <!-- subtle underside shadow to give curvature -->
-      <ellipse cx="48" cy="44" rx="30" ry="6" fill="#000" opacity="0.06" />
+      <ellipse cx="48" cy="44" rx="30" ry="6" fill="#000" opacity="0.08" />
     </g>
   </g>
 
