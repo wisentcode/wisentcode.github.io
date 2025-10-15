@@ -134,4 +134,36 @@
   document.querySelector(".back-to-top").onclick = () => {
     scrollTo(document.documentElement);
   };
+
+  // ====== contact form: open default email client using mailto:
+  document.querySelectorAll('.ud-contact-form').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector('[name="fullName"]') ? form.querySelector('[name="fullName"]').value.trim() : '';
+      const email = form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value.trim() : '';
+      const phone = form.querySelector('[name="phone"]') ? form.querySelector('[name="phone"]').value.trim() : '';
+      const message = form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value.trim() : '';
+
+      // recipient can be customized per form with data-recipient attribute
+      const recipient = form.getAttribute('data-recipient') || 'office@wisentcode.com';
+
+      const subject = `Website contact from ${name || email || 'Guest'}`;
+      const bodyLines = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
+        '',
+        'Message:',
+        message,
+      ];
+
+      const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+      // open default mail client
+      window.location.href = mailto;
+    });
+  });
+
 })();
+
