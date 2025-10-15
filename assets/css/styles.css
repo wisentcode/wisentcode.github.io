@@ -1334,6 +1334,72 @@ p {
   position: relative;
 }
 
+/* ===== Career CSS ===== */
+.ud-career {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .ud-career {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+.ud-career .ud-single-job {
+  background: var(--white);
+  border: 1px solid #f3f4fe;
+  -webkit-box-shadow: 0px 20px 60px -20px rgba(48,86,211,0.08);
+          box-shadow: 0px 20px 60px -20px rgba(48,86,211,0.08);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ud-career .ud-job-content h4 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.ud-career .ud-job-content p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #637381;
+  margin-bottom: 18px;
+}
+
+.ud-career .ud-main-btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ud-career .ud-single-job {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ud-career .ud-single-job {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
 @media (max-width: 767px) {
   .ud-contact {
     padding: 80px 0;
