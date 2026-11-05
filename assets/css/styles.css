@@ -13,6 +13,11 @@
   --accent-2: #179bee;
   --dark: #000000;
   --white: #ffffff;
+  /* One card style used across the home page */
+  --card-radius: 14px;
+  --card-border: 1px solid rgba(15, 23, 42, 0.07);
+  --card-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+  --card-shadow-hover: 0 22px 54px rgba(48, 86, 211, 0.18);
 }
 
 html {
@@ -2811,6 +2816,287 @@ p {
     margin: 5px 10px;
     font-size: 14px;
     padding: 10px 20px;
+  }
+}
+
+/*===========================
+  VISUAL RHYTHM
+  One card style, dark Process section, alternating section backgrounds
+===========================*/
+
+/* ----- One card style (home page) ----- */
+.ud-single-feature,
+.ud-about-wrapper,
+.ud-single-faq,
+.ud-single-testimonial,
+.ud-single-team,
+.ud-career .ud-single-job,
+.ud-contact-form-wrapper {
+  background: var(--white);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.ud-about-wrapper {
+  overflow: hidden;
+}
+
+/* Features become cards with the link pinned to the bottom (aligned) */
+.ud-single-feature {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 32px 26px 28px;
+}
+
+.ud-single-feature .ud-feature-icon {
+  margin-bottom: 28px;
+  flex-shrink: 0;
+}
+
+.ud-single-feature .ud-feature-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ud-single-feature .ud-feature-desc {
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.ud-single-feature .ud-feature-link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.ud-single-feature .ud-feature-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Equal-height testimonial, team and job cards */
+.ud-single-testimonial {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+}
+
+.ud-single-testimonial .ud-testimonial-content {
+  flex: 1;
+}
+
+.ud-single-team {
+  isolation: isolate; /* keep the decorative shapes above the card background */
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 36px 20px 24px;
+}
+
+.ud-career .ud-single-job {
+  height: calc(100% - 30px);
+}
+
+/* Pin the Apply buttons to the bottom so they line up across cards */
+.ud-career .ud-job-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ud-career .ud-job-content p {
+  flex: 1;
+}
+
+.ud-career .ud-job-content .ud-main-btn {
+  align-self: flex-start;
+}
+
+/* Hover: lift + accent glow. Uses the individual `translate` property because
+   the fadeInUp animation keeps `transform` pinned after it finishes. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .ud-single-feature,
+  .ud-single-testimonial,
+  .ud-single-team,
+  .ud-career .ud-single-job,
+  .ud-single-faq {
+    transition: translate 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ud-single-feature:hover,
+  .ud-single-testimonial:hover,
+  .ud-single-team:hover,
+  .ud-career .ud-single-job:hover {
+    translate: 0 -6px;
+  }
+}
+
+.ud-single-feature:hover,
+.ud-single-testimonial:hover,
+.ud-single-team:hover,
+.ud-career .ud-single-job:hover,
+.ud-single-faq:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(48, 86, 211, 0.28);
+}
+
+/* ----- Section backgrounds: break the long white runs ----- */
+.ud-testimonials {
+  padding-bottom: 90px;
+}
+
+.ud-team {
+  background: #f3f4fe;
+  padding-bottom: 90px;
+}
+
+@media (max-width: 767px) {
+  .ud-testimonials {
+    padding-bottom: 50px;
+  }
+
+  .ud-team {
+    padding-bottom: 50px;
+  }
+}
+
+.ud-contact-title span {
+  color: var(--primary-color);
+}
+
+/* ----- Process (dark band that echoes the hero) ----- */
+.ud-process {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 90px;
+  background:
+    radial-gradient(800px 380px at 50% 0%, rgba(48, 86, 211, 0.3), rgba(48, 86, 211, 0) 70%),
+    radial-gradient(520px 300px at 100% 100%, rgba(23, 155, 238, 0.14), rgba(23, 155, 238, 0) 70%),
+    var(--dark);
+}
+
+.ud-process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(157, 184, 255, 0.22) 1px, transparent 1.4px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 0%, transparent 70%);
+          mask-image: radial-gradient(ellipse at 50% 30%, #000 0%, transparent 70%);
+}
+
+.ud-process .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ud-process .ud-section-title span {
+  color: var(--accent-2);
+}
+
+.ud-process .ud-section-title h2 {
+  color: var(--white);
+}
+
+.ud-process .ud-section-title p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ud-process-step {
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 28px 26px 30px;
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(157, 184, 255, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ud-process-step:hover {
+  border-color: rgba(157, 184, 255, 0.45);
+  box-shadow: 0 22px 60px rgba(48, 86, 211, 0.3);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .ud-process-step {
+    transition: translate 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ud-process-step:hover {
+    translate: 0 -6px;
+  }
+}
+
+.ud-process-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.ud-process-number {
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #5b86ff;
+  background: linear-gradient(135deg, #5b86ff, #22b8f0);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ud-process-line {
+  flex: 1;
+  height: 1px;
+  margin: 0 16px;
+  background: linear-gradient(90deg, rgba(127, 176, 255, 0.55), rgba(127, 176, 255, 0));
+}
+
+.ud-process-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 22px;
+  color: var(--white);
+  background: linear-gradient(135deg, #3056d3, #22b8f0);
+  box-shadow: 0 8px 22px rgba(48, 86, 211, 0.45);
+}
+
+.ud-process-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.ud-process-desc {
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.ud-process-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .ud-process {
+    padding: 80px 0 50px;
   }
 }
 /*# sourceMappingURL=ud-styles.css.map */
