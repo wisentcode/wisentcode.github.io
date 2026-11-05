@@ -6,8 +6,24 @@
   --font: "Inter", sans-serif;
   --body-color: #000000c7;
   --heading-color: #292929;
-  --primary-color: #000000;
+  /* Brand accent (blue) is used for buttons, icons, labels and links.
+     --dark is used for the hero and footer surfaces. */
+  --primary-color: #3056d3;
+  --primary-dark: #2748b4;
+  --accent-2: #179bee;
+  --dark: #000000;
   --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -148,7 +164,7 @@ p {
 
 .ud-main-btn:hover {
   color: var(--white);
-  background: var(--heading-color);
+  background: var(--primary-dark);
 }
 
 @media (max-width: 767px) {
@@ -189,7 +205,7 @@ p {
 
 .back-to-top:hover {
   color: var(--white);
-  background: var(--heading-color);
+  background: var(--primary-dark);
 }
 
 /* ===== Header CSS ===== */
@@ -492,12 +508,14 @@ p {
 }
 
 .sticky .navbar-btn .ud-white-btn:hover {
-  background: var(--heading-color);
+  background: var(--primary-dark);
 }
 
 /* ===== Hero CSS ===== */
 .ud-hero {
-  background: var(--primary-color);
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(48, 86, 211, 0.32), rgba(48, 86, 211, 0) 70%),
+    var(--dark);
   padding-top: 180px;
 }
 
@@ -561,16 +579,48 @@ p {
   }
 }
 
+.ud-hero-content .ud-hero-title .ud-hero-accent {
+  color: #5b86ff;
+  background: linear-gradient(90deg, #5b86ff, #22b8f0);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .ud-hero-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.ud-hero-buttons .ud-main-btn {
+  padding: 16px 30px;
+  font-weight: 600;
+}
+
+.ud-hero-buttons .ud-main-btn:not(.ud-outline-btn) {
+  -webkit-box-shadow: 0 8px 30px rgba(48, 86, 211, 0.45);
+          box-shadow: 0 8px 30px rgba(48, 86, 211, 0.45);
+}
+
+.ud-hero-buttons .ud-outline-btn {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--white);
+}
+
+.ud-hero-buttons .ud-outline-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+  color: var(--white);
 }
 
 .ud-hero-buttons .ud-main-btn {
@@ -612,6 +662,15 @@ p {
   margin-bottom: 40px;
 }
 
+.ud-hero-brands-label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .ud-hero-brands {
   display: flex;
   flex-wrap: wrap;
@@ -623,10 +682,10 @@ p {
 
 .ud-hero-brands .brand-icon {
   transition: opacity .25s ease, transform .15s ease, filter .25s ease;
-  opacity: 0.6;
+  opacity: 0.75;
   width: 40px;
   height: 40px;
-  filter: grayscale(1);
+  filter: grayscale(1) brightness(2.2);
 }
 
 .ud-hero-brands .brand-icon:hover {
@@ -892,6 +951,42 @@ p {
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .ud-about-image {
     text-align: center;
+  }
+}
+
+.ud-about-image {
+  background: linear-gradient(180deg, #05070f, #0b1533);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ud-about-image img {
+  display: block;
+  height: auto;
+}
+
+/* Stacked layout: show the panel as a rounded card inside the white card */
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .ud-about-image {
+    background: transparent;
+    padding: 0 24px 40px;
+  }
+
+  .ud-about-image img {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ud-about-image {
+    padding: 0 16px 24px;
   }
 }
 
@@ -1550,7 +1645,7 @@ p {
 
 /* ===== Footer CSS ===== */
 .ud-footer {
-  background: var(--heading-color);
+  background: var(--dark);
   padding-top: 100px;
   position: relative;
   z-index: 1;
@@ -1575,6 +1670,27 @@ p {
 .ud-footer .shape.shape-3 {
   bottom: 0;
   right: 0;
+}
+
+/* Bison brand watermark */
+.ud-footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 48px;
+  right: 13%;
+  width: 200px;
+  height: 242px;
+  background: url("../images/brand/bison.svg") no-repeat center / contain;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .ud-footer::before {
+    right: -30px;
+    opacity: 0.04;
+  }
 }
 
 .ud-widget {
@@ -1615,7 +1731,7 @@ p {
 }
 
 .ud-widget .ud-widget-socials a:hover {
-  color: var(--primary-color);
+  color: var(--accent-2);
 }
 
 .ud-widget .ud-widget-title {
@@ -1634,7 +1750,7 @@ p {
 }
 
 .ud-widget .ud-widget-links a:hover {
-  color: var(--primary-color);
+  color: var(--accent-2);
   padding-left: 10px;
 }
 
@@ -1699,7 +1815,7 @@ p {
 }
 
 .ud-footer-bottom .ud-footer-bottom-left a:hover {
-  color: var(--primary-color);
+  color: var(--accent-2);
 }
 
 .ud-footer-bottom .ud-footer-bottom-right {
@@ -1710,7 +1826,7 @@ p {
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a {
-  color: var(--primary-color);
+  color: var(--accent-2);
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a:hover {
