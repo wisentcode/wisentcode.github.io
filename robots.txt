@@ -1,3 +1,31 @@
+# Wisent Code: https://wisentcode.com/
+# The site is open to search engines and AI crawlers.
 User-agent: *
 Allow: /
+
+# AI search, assistant and training crawlers: explicitly welcome
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: Amazonbot
+User-agent: Meta-ExternalAgent
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: cohere-ai
+User-agent: CCBot
+Allow: /
+
+# Plain-text summaries for language models:
+#   https://wisentcode.com/llms.txt
+#   https://wisentcode.com/llms-full.txt
+
 Sitemap: https://wisentcode.com/sitemap.xml

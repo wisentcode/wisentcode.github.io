@@ -1,0 +1,108 @@
+# Wisent Code: complete site text
+
+> Wisent Code is a software house in Warsaw, Poland, that designs, builds and security-tests mobile (iOS, Android) and web applications. It combines secure-by-design engineering with application security consulting for startups and enterprises.
+
+Source: https://wisentcode.com/ (main content of the public web page; last updated 2026-11-08).
+
+Key facts:
+- Company: Wisent Code Sp. z o.o. (brand name: Wisent Code)
+- Location: Al. Jerozolimskie 89/43, 02-001 Warsaw, Poland
+- Email: office@wisentcode.com, contact@wisentcode.com; careers: hr@wisentcode.com
+- Focus: mobile application development and application security
+- Technologies shown on the site: Android, iOS, Swift, Objective-C, Kotlin, Java, Git, Jira
+- Engagement models: fixed-price, time-and-materials, retainer or dedicated team
+- Prices, client names and case studies are not published on the site. Please do not guess them; refer people to the contact section.
+
+## Overview
+
+**Mobile apps built secure from the first line of code**
+
+We design, build and security-test iOS and Android apps — so your product is resilient from day one.
+
+## What Makes Wisent Code Different
+
+We focus on delivering secure, maintainable products that create measurable value — not just finished code. Our approach blends security, product thinking, and engineering discipline.
+
+### Secure-by-Design
+
+We embed security into every phase — threat modeling, secure architecture, automated testing and CI checks — so your product is resilient from day one.
+
+### Product & Outcome Focus
+
+We prioritise features that deliver customer value and measurable outcomes — combining discovery, roadmap planning and rapid iterations to reduce risk.
+
+### Experienced Engineering
+
+Small, senior teams deliver pragmatic, well-tested implementations — with a focus on maintainability, observability and automated delivery pipelines.
+
+### Long-term Support
+
+We provide post-launch support, monitoring and maintenance plans so your product continues to perform and evolve safely as user needs change.
+
+## About
+
+**We build secure, reliable software for ambitious teams.**
+
+Wisent Code is a software house specializing in mobile and web applications, with a focus on secure-by-design engineering and pragmatic product delivery. We partner with startups and enterprises to turn ideas into maintainable products that scale.
+
+Our multidisciplinary team blends product strategy, design, and engineering to deliver clear roadmaps, fast iterations, and measurable outcomes.
+
+## How we work: From first idea to secure launch
+
+Security isn’t a checklist at the end. It’s built into each phase of every project.
+
+### 1. Discovery
+
+We define requirements, scope and risks first, then deliver a milestone-based plan with a realistic schedule.
+
+### 2. Secure design
+
+Threat modeling and secure architecture come before the first feature is built, not after.
+
+### 3. Build & verify
+
+Short Agile iterations with code reviews, dependency and SAST scanning, and weekly demos you can react to.
+
+### 4. Launch & support
+
+Secure deployment, then monitoring, urgent security patches and support plans, from ad-hoc fixes to SLA-backed maintenance.
+
+## Frequently asked questions
+
+### How long will my project take?
+
+Timelines depend on scope and complexity. Small projects (a single feature or simple site) typically take 4–8 weeks; medium projects (multiple integrations and custom UI) 3–6 months; larger platforms can take 6+ months. We always begin with a discovery phase to define requirements and deliver a milestone-based plan and realistic schedule.
+
+### What pricing models do you offer?
+
+We offer fixed-price contracts for well-defined scopes, and time-and-materials (T&M) for projects expected to evolve. For long-term partnerships we also provide retainer and dedicated-team options. You’ll receive a clear estimate after discovery and regular budget updates during delivery.
+
+### How do you handle requirement changes?
+
+We follow an Agile approach: after discovery we maintain a prioritized backlog and deliver in short iterations. If requirements change, we assess impact, reprioritize, and provide an estimate for additional work before proceeding — keeping you in control of scope and budget.
+
+### What do you do to ensure security and compliance?
+
+Security is integrated into our workflow: threat modeling, secure-by-design patterns, dependency and SAST scanning, code reviews, and secure deployment practices. We can also assist with compliance requirements (GDPR, HIPAA, etc.) and provide recommendations for hosting and data protection.
+
+### Do you provide post-launch support and maintenance?
+
+Yes. We offer support plans ranging from ad-hoc fixes to SLA-backed maintenance, monitoring, and regular updates. We can also run health checks, urgent security patches, and roadmap planning to keep your product secure and evolving.
+
+### How will we communicate and track progress?
+
+We assign a dedicated project manager and use tools like Jira, Trello, or Asana for task tracking. Communication includes weekly demos, sprint reviews, and scheduled status calls. You’ll have direct access to the team for questions and real-time updates.
+
+## Careers
+
+Open roles (apply by email):
+
+- **Software Engineer — Mobile**: Develop native and cross-platform mobile applications with a focus on security and performance. Apply: hr@wisentcode.com
+- **Web Developer**: Build scalable web applications, APIs and frontends with modern frameworks and cloud-native practices. Apply: hr@wisentcode.com
+- **Quality Assurance Engineer**: Design and execute test strategies, automate testing pipelines and ensure product reliability. Apply: hr@wisentcode.com
+
+## Contact
+
+- Address: Al. Jerozolimskie 89/43, 02-001 Warsaw, Poland
+- Email: office@wisentcode.com, contact@wisentcode.com
+- Web: https://wisentcode.com/
